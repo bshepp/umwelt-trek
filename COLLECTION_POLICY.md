@@ -18,10 +18,14 @@ this project does by default and what changes it will accept. Their use is to th
 person who means well and has not thought it through: the defaults do the thinking
 first. No machinery is added to the code to police anyone.
 
-## 1. Receive only
+## 1. Listen; never connect
 
-The collector listens. It does not connect to, probe, interfere with or transmit
-toward anything it does not own.
+The software radios only receive. The collector does not connect to, log in to,
+interfere with or test anything it does not own.
+
+One exception, stated plainly: the WiFi and Bluetooth scans are the ordinary kind
+every phone performs. They send the standard "who is there?" request and note the
+answers. They never pair, join or exchange anything further.
 
 *Why:* everything else here depends on the collector being a bystander.
 
@@ -95,9 +99,12 @@ What these records do expose is the collector. The set of aircraft heard at a gi
 minute is a fingerprint of where the receiver was, so a published list of them
 publishes the walk. That falls under rule 7.
 
-Other radio traffic is measured as power in a band and not decoded. Telephone calls,
-pagers and anything encrypted are never decoded; listening to those is unlawful as
-well as wrong.
+Most other radio is measured as power in a band and not decoded. The exception is
+small unlicensed devices (weather stations, tyre sensors, remote controls): their
+transmissions are decoded to count them and tell the kinds apart, and their device
+numbers are stored as salted hashes, as in rule 2. Telephone calls, pagers and
+anything encrypted are never decoded; listening to those is unlawful as well as
+wrong.
 
 ## 7. The carrier's own exposure is the carrier's choice, with safe defaults
 
