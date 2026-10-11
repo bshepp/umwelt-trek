@@ -39,8 +39,8 @@ Sensors in use on the working system:
 | Colour | webcam | a coarse colour summary; no image |
 | Laptop | internal | battery, temperature, load |
 
-A vessel (AIS) receiver is written and has decoded a test signal. It has not yet
-received a ship.
+A vessel (AIS) receiver, an RTL-SDR dongle with AIS-catcher, received its first ships
+on 2026-10-11.
 
 ## What it should collect
 
