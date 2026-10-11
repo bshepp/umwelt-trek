@@ -1,0 +1,23 @@
+# Collected data never belongs in this repository
+data/
+sessions/
+*.jsonl
+*.nmea
+*.iq
+*.cf32
+*.wav
+*.jpg
+*.png
+NOTES.md
+
+# Host-specific configuration and secrets
+config_local*.yaml
+secrets.h
+*.key
+.env
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
