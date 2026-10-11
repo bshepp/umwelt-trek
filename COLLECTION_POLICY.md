@@ -93,12 +93,33 @@ Other radio traffic is measured as power in a band and not decoded. Telephone ca
 pagers and anything encrypted are never decoded; listening to those is unlawful as
 well as wrong.
 
-## 7. The collector's own track is the most sensitive thing it makes
+## 7. The carrier's own exposure is the carrier's choice, with safe defaults
 
-Position is recorded in full and never published raw. Where the carrier lives is not
-published at any precision. Collected data does not go into a code repository.
+Rules 1 to 6 protect people who never agreed to be near a sensor, so they cannot be
+switched off. This rule protects the person carrying the collector, who can consent,
+so it sets defaults and lets them be overridden knowingly.
 
-*Why:* a published coordinate cannot be taken back.
+- **Collection is never thinned.** Position and everything else is recorded in full
+  and stays on the collecting machine. Protecting the carrier by recording less would
+  cost the data and add failure points, and nothing is exposed until something leaves
+  the machine.
+- **Protection happens at export.** Data leaves through one export step, and that step
+  is private by default: places the carrier has marked (home above all) are cut out,
+  with the cut made at an irregular distance so the gap does not point at its centre;
+  and the records that give position away without being position are left out unless
+  asked for (aircraft heard, named public hotspots, exact times).
+- **The carrier may publish more.** Every default can be lifted, one at a time, by
+  the person whose track it is.
+- **Collected data does not go into a code repository**, private or not. A repository
+  can be made public later and its history comes with it.
+
+*Why:* a published coordinate cannot be taken back, and a home address is the one
+fact here that can be turned against someone. But whose risk it is matters. A tool
+that forbids its user from sharing their own walk is making a choice that belongs to
+them; a tool that shares it by accident has made the same mistake the other way.
+
+The export step does not exist yet in the working system; there, nothing is published
+at all.
 
 ## 8. Odd readings are kept
 
