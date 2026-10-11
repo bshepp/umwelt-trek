@@ -3,6 +3,10 @@
 **Draft, under discussion.** These are the rules the working system follows today,
 written down so they can be argued with. Each gives the rule, then the reason.
 
+Where a reason mentions law, it is a layman's summary of United States and California
+law, not legal advice, and other places differ. The rules do not depend on it: each
+one is meant to hold where the law is silent or looser.
+
 The starting point: *can be received* and *should be kept* are different questions.
 Something being lawful to observe in public does not settle what a machine that never
 tires, never forgets and can be searched afterwards should store about the people it
@@ -21,9 +25,15 @@ WiFi and Bluetooth addresses, and the names of private networks, are replaced by
 salted hashes before they reach the disk. The salt stays on the collecting machine.
 Names of public hotspots are kept as they are.
 
-*Why:* a network address is broadcast openly, but a database lookup turns a home
-router's address into a street address, and a phone's address seen twice is a person
-seen twice. Counting the crowd needs neither.
+*Why:* a network address is broadcast openly and receiving it is lawful. But public
+location databases turn a home router's address into a street address, and a phone's
+address seen twice is a person seen twice. Privacy law in several places (the GDPR,
+California's CCPA) treats such identifiers as personal data for that reason. Counting
+the crowd needs none of it.
+
+Only the announcements are read: network name, address, signal strength. The traffic
+itself is never captured, encrypted or not. Capturing the contents of someone's
+network traffic is interception, not observation.
 
 ## 3. Sound is measured, not recorded
 
@@ -33,9 +43,12 @@ collector.
 A deliberate recording is a separate act, done by hand: one's own voice, animals,
 weather, water, an empty trail.
 
-*Why:* conversations are protected in a way appearances are not. In many places,
-California among them, recording a conversation needs the consent of everyone in it.
-Loudness and spectrum describe a place without capturing what anyone said.
+*Why:* conversations are protected in a way appearances are not. California law
+(Penal Code 632) forbids recording a confidential conversation without the consent of
+everyone in it. "Confidential" turns on what the speakers could reasonably expect, so
+a speech to a crowd is not covered and a quiet talk on a park bench may be. A machine
+cannot judge that, and a walk passes hundreds of conversations. Loudness and spectrum
+describe a place without capturing what anyone said, so the question never arises.
 
 ## 4. No image is kept by an always-on sensor
 
@@ -45,8 +58,12 @@ picture is taken only on purpose, and checked for people before it is kept.
 
 Nothing is used to recognise or follow an individual. No faces, no gait, no plates.
 
-*Why:* photographing a public place is ordinary. A camera that runs all day and can
-be searched afterwards is a different thing from a person taking a photograph.
+*Why:* photographing people in a public place is lawful in the United States, since
+nobody there can expect not to be seen. The limits are places where people do expect
+privacy (a window into a home, for one), and using someone's likeness to sell
+something. But a camera that runs all day and can be searched afterwards is a
+different thing from a person taking a photograph, and the law has not caught up with
+the difference. The rule here is stricter than the law on purpose.
 
 ## 5. Some places have stricter rules, and the machine applies them itself
 
@@ -61,8 +78,14 @@ it looser.
 
 Aircraft and vessel identifiers are stored as received.
 
-*Why:* they are transmitted so that anyone nearby can know who is there. This is the
-one place where the identifier is the point of the signal. Open to argument.
+*Why:* they are transmitted so that anyone nearby can know who is there, and United
+States law exempts such transmissions from its rules against intercepting radio. This
+is the one place where the identifier is the point of the signal. Open to argument: a
+small private aircraft or boat is one person's movements.
+
+Other radio traffic is measured as power in a band and not decoded. Telephone calls,
+pagers and anything encrypted are never decoded; listening to those is unlawful as
+well as wrong.
 
 ## 7. The collector's own track is the most sensitive thing it makes
 
