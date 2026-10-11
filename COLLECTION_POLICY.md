@@ -79,9 +79,15 @@ it looser.
 Aircraft and vessel identifiers are stored as received.
 
 *Why:* they are transmitted so that anyone nearby can know who is there, and United
-States law exempts such transmissions from its rules against intercepting radio. This
-is the one place where the identifier is the point of the signal. Open to argument: a
-small private aircraft or boat is one person's movements.
+States law exempts such transmissions from its rules against intercepting radio. They
+are also already received everywhere: volunteer and commercial networks log the same
+broadcasts worldwide and keep the history. One more receiver in a backpack tells
+nobody anything about an aircraft or a ship that is not already on record, so hashing
+the identifier would protect no one and would only make the data less useful.
+
+What these records do expose is the collector. The set of aircraft heard at a given
+minute is a fingerprint of where the receiver was, so a published list of them
+publishes the walk. That falls under rule 7.
 
 Other radio traffic is measured as power in a band and not decoded. Telephone calls,
 pagers and anything encrypted are never decoded; listening to those is unlawful as
