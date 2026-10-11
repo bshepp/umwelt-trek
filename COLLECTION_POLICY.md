@@ -12,6 +12,12 @@ Something being lawful to observe in public does not settle what a machine that 
 tires, never forgets and can be searched afterwards should store about the people it
 passes.
 
+**What this file cannot do.** The code is open and anyone may change it, so nothing here
+stops a person who wants to build something else from it. These rules describe what
+this project does by default and what changes it will accept. Their use is to the
+person who means well and has not thought it through: the defaults do the thinking
+first. No machinery is added to the code to police anyone.
+
 ## 1. Receive only
 
 The collector listens. It does not connect to, probe, interfere with or transmit
