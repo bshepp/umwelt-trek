@@ -84,6 +84,14 @@ it looser.
 
 *Why:* the person carrying the collector is the least reliable part of the policy.
 
+*Where the working system falls short:* the rule needs a position to fire, and
+indoors the receivers often have none. On one day the collector ran its full sensor
+set for 48 minutes inside a registered workplace because no fix had been had since a
+restart. Until a fallback that recognises the place without a position exists (the
+set of nearby networks, as hashes, is the candidate), the carrier applies the
+restricted mode by hand on arrival, which is exactly the memory the rule was meant
+to replace.
+
 ## 6. Broadcasts meant for everyone are kept as broadcast
 
 Aircraft and vessel identifiers are stored as received.
@@ -131,8 +139,15 @@ fact here that can be turned against someone. But whose risk it is matters. A to
 that forbids its user from sharing their own walk is making a choice that belongs to
 them; a tool that shares it by accident has made the same mistake the other way.
 
-The export step does not exist yet in the working system; there, nothing is published
-at all.
+The export step does not exist yet in the working system; there, no collected data is
+published at all.
+
+*Models are not records.* A model trained on the data may be published: it carries
+weights, the names of its inputs and its scores, and none of the minutes it was
+trained on. The rule for publishing one is that the packet leaves unchanged and its
+wrapping is stripped: no file paths, no session names, no times of the episodes it was
+scored on, and never the per-minute outputs, which would be the carrier's days
+rebuilt. The first four lines were published this way on 2026-11-06.
 
 ## 8. Odd readings are kept
 
