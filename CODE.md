@@ -54,10 +54,18 @@ The flags that made the four published lines:
 | `dawn_hue_C0.03` | `probe --event dawn --exclude sys_,usb_,light_,opt_ --no-presence --C 0.03` |
 | `waterfall_np_C0.1` | `probe --event waterfall --exclude sys_,usb_ --dropout 0.5 --no-presence --C 0.1` |
 
-Retraining with these flags on the same table reproduces the binary lines exactly. The four-class `carrier`
-line comes out within run-to-run variation of the published one: the same inputs and calibration, weights
-equal to about 0.005, accuracy 0.9510 against the published 0.9513. The fit does not settle on identical
-weights on every run.
+Retraining with these flags on the same table reproduces the published lines exactly when the numerical
+libraries run on one thread, which is how they were trained:
+
+```
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python -m umwelt_trek.probe ...
+```
+
+With more threads the two-class lines still come out the same, and the four-class `carrier` line comes out
+within 0.005 in its weights (accuracy 0.9510 against the published 0.9513). The reason is that the solver
+stops at its default tolerance, well short of the exact optimum, so the order of the arithmetic decides
+where it stops. A much tighter tolerance removes the dependence on threads but lands on different weights
+(by up to 0.06); that is a change to the model and will be made, and reported as one, at the next publish.
 
 One thing to know when reading a published `model.json` by hand: an input that never varied in training has
 `sd` 0 in the `carrier` and `waterfall` lines' files. Treat a zero `sd` as 1, as `predict` does. Lines trained with this code
