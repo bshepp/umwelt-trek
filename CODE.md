@@ -60,7 +60,7 @@ equal to about 0.005, accuracy 0.9510 against the published 0.9513. The fit does
 weights on every run.
 
 One thing to know when reading a published `model.json` by hand: an input that never varied in training has
-`sd` 0 in the `carrier` line's file. Treat a zero `sd` as 1, as `predict` does. Lines trained with this code
+`sd` 0 in the `carrier` and `waterfall` lines' files. Treat a zero `sd` as 1, as `predict` does. Lines trained with this code
 write 1 there.
 
 ## The rules the code keeps
