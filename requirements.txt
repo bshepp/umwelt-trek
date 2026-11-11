@@ -1,0 +1,2 @@
+numpy
+scikit-learn    # only for training (umwelt_trek.probe); the table builder and predict need numpy alone

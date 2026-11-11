@@ -12,10 +12,12 @@ what it can.
 
 ## Status
 
-**The code is not released here yet.** The collector exists and is used daily, in a
-private working repository whose history cannot be published (it contains places).
-This repository is where a scrubbed copy of the code will go. Until it does, this page
-describes the tool; it is not the tool.
+**The first part of the code is released: from records to a line.** The feature
+extractor, the table builder, the trainer, the calibrator and the model loader are
+here, with an invented data set to run them on. See [CODE.md](CODE.md). **The collector
+is not released yet.** It exists and is used daily, in a private working repository
+whose history cannot be published (it contains places). A scrubbed copy follows. Until
+it does, this page describes that part of the tool; it is not the tool.
 
 **Models are released.** The first scene lines are published on Hugging Face (below),
 with cards that say exactly what each one can and cannot do.
@@ -104,7 +106,7 @@ the number can be believed or only the ranking, and how the data was handled.
 The models are the exact packets from the working zoo, with their wrapping stripped.
 What never leaves the collecting machine: the per-minute table they were trained on,
 and their per-minute outputs, which are the carrier's days. The feature extractor
-that makes a packet usable follows with the code.
+that makes a packet usable is in this repository ([CODE.md](CODE.md)).
 
 One dataset is public, and it is not about bystanders: the
 [cat keyboard corpus](https://huggingface.co/datasets/bshepp/cat-keyboard-corpus), the

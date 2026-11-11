@@ -21,3 +21,7 @@ venv/
 .venv/
 __pycache__/
 *.pyc
+
+# Example and pipeline outputs
+example_data/
+out/
