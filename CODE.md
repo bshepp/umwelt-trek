@@ -93,4 +93,12 @@ permissions. Publish models and scores, not these.
 The collection rules, and where the working system still falls short of them, are in
 [COLLECTION_POLICY.md](COLLECTION_POLICY.md).
 
+## Acknowledgements
+
+The Coverage section of the model cards, the event counts in it, and the plan to score the frozen lines on new
+days separately from any retraining come from feedback on coverage and evaluation reporting by
+[Twu31 on Hugging Face](https://huggingface.co/Twu31), in
+[the discussion under the article](https://huggingface.co/blog/bshepp/umwelt-trek-models). That feedback was on
+how the results are reported; they have not independently validated the models or the data.
+
 MIT licence.
